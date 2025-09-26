@@ -1,0 +1,69 @@
+/* Container */
+.options {
+  border: 1px solid rgb(209, 201, 201);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #fff;
+}
+
+/* Question text */
+.options h5 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary-slides-title);
+}
+
+/* List reset */
+.options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each option label */
+.options label {
+  display: block;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+/* Option line (radio + text + icon) */
+.option-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect */
+.option-line:hover {
+  background-color: #f0f4ff;
+}
+
+/* Radio button */
+.option-line input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--color-primary-slides-title);
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Correct/incorrect icon */
+.option-line div {
+  margin-left: auto; /* push check/❌ to the right */
+  font-size: 1rem;
+}
+
+
+.quiz-home-btn {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 10%;
+    /* align-items: right; */
+}
+

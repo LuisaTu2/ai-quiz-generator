@@ -1,0 +1,50 @@
+.congratulations-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+    /* background-color: red; */
+}
+
+.congratulations-text{
+    padding: 10% 0%;
+    text-align: center;
+}
+
+.congratulations-text div {
+    margin-top: 15px;
+}
+
+.congratulations-text div i{
+    font-size: 14px;
+    color: var(--color-text-muted)
+}
+
+.plant-loaders {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+/* All boxes start invisible */
+.plant-transition {
+  /* width: 100px; */
+  /* height: 100px; */
+  /* opacity: 0; */
+  /* transform: translateY(20px); */
+  /* animation: fadeInUp 1s forwards;  */
+  /* same animation, different delays */
+}
+
+/* Different delays for each box */
+/* .plant-0 { animation-delay: 0ms; }
+.plant-1 { animation-delay: 300ms; }
+.plant-2 { animation-delay: 600ms; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */

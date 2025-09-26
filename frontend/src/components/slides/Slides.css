@@ -1,0 +1,52 @@
+/* Fieldset Styling */
+fieldset {
+  border: 1px solid rgb(209, 201, 201);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #fff;
+}
+
+legend {
+  font-size: 1rem;
+  /* font-weight: bold; */
+  color: var(--color-primary-slides-title);
+  padding: 0 0.25rem;
+}
+
+/* Radio buttons: smaller, inline with text */
+input[type="radio"] {
+  width: 13px;
+  height: 13px;
+  margin-right: 0.5rem;
+  accent-color: var(--color-primary-slides-title); /* modern, easy way to color radios */
+  cursor: pointer;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.5rem;
+  margin-bottom: 0.3rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+label:hover {
+  background-color: #f0f4ff; /* subtle hover effect */
+}
+
+/* Optional: stacked nicely for smaller screens */
+fieldset > div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* custom */
+.app-topics-label span{
+  font-size: 14px;
+  font-style: italic;
+}

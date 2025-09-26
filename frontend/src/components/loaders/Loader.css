@@ -1,0 +1,45 @@
+.writing-loader {
+  position: relative;
+  width: 220px;   /* glide space */
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hand {
+  position: absolute;
+  font-size: 1.5rem;
+  left: 40px; /* start more to the right */
+  animation: glideMoreBobs 3s ease-in-out infinite;
+}
+
+@keyframes glideMoreBobs {
+  0%    { left: 40px; transform: translateY(0); opacity: 1; }
+  10%   { transform: translateY(-2px); }
+  20%   { transform: translateY(2px); }
+  30%   { transform: translateY(-2px); }
+  40%   { transform: translateY(2px); }
+  50%   { transform: translateY(-2px); }
+  60%   { transform: translateY(2px); }
+  70%   { left: 180px; transform: translateY(0); }   /* end */
+  75%   { transform: translateY(-6px); }             /* hop */
+  80%   { transform: translateY(0); }
+  90%   { left: 40px; transform: translateY(0); opacity: 0.3; }  /* fade return */
+  100%  { left: 40px; transform: translateY(0); opacity: 1; }
+}
+
+.quiz-loader{
+  margin: 10%;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.loader-highlight {
+  font-weight: bold;
+  color: var(--color-primary-slides-title)
+
+}

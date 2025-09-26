@@ -1,0 +1,56 @@
+/* PottedPlantSpinner.css */
+.potted-plant-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.plant {
+  display: inline-block;
+  font-size: 1.5rem;
+  animation: hop 2s ease-in-out infinite alternate;
+}
+
+@keyframes hop {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Backflip animation */
+.backflip {
+  animation: backflip 2s ease-in-out forwards; /* slower */
+}
+
+@keyframes backflip {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(-25px) rotate(180deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-40px) rotate(360deg);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(-25px) rotate(540deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0) rotate(720deg);
+    opacity: 1;
+  }
+}

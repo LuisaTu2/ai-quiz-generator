@@ -1,0 +1,127 @@
+.app-container{
+    max-width: 1200px;   /* prevents things from being too wide */
+    margin: 0 auto;      /* centers the container */
+    padding: 1rem;      
+     /* breathing room */
+    background: var(--color-background);
+}
+
+.app-title{
+    font-size: 24px;
+    font-weight: 800;
+    /* color: rgb(172, 207, 172);  */
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.app-subtitle{
+  font-size: 14px;
+  color: rgb(191, 194, 198);
+  font-style: italic;
+  text-align: center;
+}
+
+.app-modules-container {
+  /* background-color: #e4f7e4; */
+  margin: 5%;
+  max-width: 500px;
+}
+
+/* Small (phones) */
+@media (max-width: 640px) {}
+
+/* Medium (tablets) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .app-modules-container {
+    margin: 5% 20%;
+  }
+}
+
+/* Large (desktops) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .app-modules-container {
+      margin: 2% 30%; 
+  }
+}
+
+/* XL (very large screens) */
+@media (min-width: 1441px) {
+    .app-modules-container {
+      margin: 1% 40%; 
+  }
+}
+
+
+/* fonts */
+body {
+  font-family: 'Nunito', 'Inter', sans-serif;
+}
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* color scheme */
+
+:root {
+  --color-primary: #6c63ff;  
+  --color-primary-slides-title: #9a94e6;
+  --color-secondary: #ff6584;
+  --color-background: #f9fafb;
+  --color-surface: #ffffff;
+  --color-text: #333333;
+  --color-text-muted: #666666;
+  --color-success: #4caf50;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  /* font-size: clamp(14px, 2vw, 18px); */
+}
+
+
+
+/* cards / panels */
+.card {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+/* buttons */
+.button {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #5a52d5;
+}
+
+/* secondary button */
+.button-secondary {
+  background-color: var(--color-secondary);
+}
+
+.button-secondary:hover {
+  background-color: #e75472;
+}
+
+/* muted text */
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+

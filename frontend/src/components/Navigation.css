@@ -1,0 +1,26 @@
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  margin-top: 1rem;
+}
+
+.nav-button {
+  max-width: 125px;
+  flex: 1; 
+  /* makes both buttons the same width */
+  padding: 0.6rem 1rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-primary-blue);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-button:hover {
+  background-color: #357ABD; /* slightly darker blue */
+}

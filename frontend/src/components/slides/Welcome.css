@@ -3,6 +3,11 @@
     color:var(--color-text);
 }
 
+.app-welcome-description {
+    padding: 0% 10% 0% 10%;
+    text-align: center;
+}
+
 .app-welcome button{    
-    margin-top: 20%;
+    margin-top: 0%;
 }

@@ -1,10 +1,16 @@
-/* Fieldset Styling */
+/* fieldset styling */
 fieldset {
   border: 1px solid rgb(209, 201, 201);
   border-radius: 8px;
   padding: 1rem;
   margin: 1rem 0;
   background-color: #fff;
+}
+
+@media (min-width: 741px) {
+  fieldset {
+    max-width: 400px;
+  }
 }
 
 legend {
@@ -49,4 +55,45 @@ fieldset > div {
 .app-topics-label span{
   font-size: 14px;
   font-style: italic;
+}
+
+
+/* slides */
+.slide {
+  margin: 0% 10%;
+  /* background-color: aqua; */
+}
+
+
+/* Medium (tablets) */
+@media (min-width: 500px) and (max-width: 740px) {
+  .slide {
+    margin: 0 20%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 740px) {
+  .slide {
+    margin: 0 20%;
+  }
+}
+
+@media (min-width: 741px) and (max-width: 1024px) {
+  .slide {
+    margin: 0 20%;
+  }
+}
+
+/* Large (desktops) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .slide {
+    margin: 0% 20%;
+  }
+}
+
+/* XL (very large screens) */
+@media (min-width: 1441px) {
+  .slide {
+    margin: 0% 10%;
+  }
 }

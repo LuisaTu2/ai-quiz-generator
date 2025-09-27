@@ -3,15 +3,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  height: 100px;
 }
 
 .plant {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 2rem;
   animation: hop 2s ease-in-out infinite alternate;
 }
-
 @keyframes hop {
   0% {
     transform: translateY(0) rotate(0deg);

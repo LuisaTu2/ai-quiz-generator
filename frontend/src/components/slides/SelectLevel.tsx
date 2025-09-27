@@ -12,7 +12,7 @@ const SelectLevel = () => {
     }
 
     return (
-    <div>
+    <div className="slide">
         <fieldset>
             <legend> What level would you like to practice? </legend>
             {
@@ -31,14 +31,7 @@ const SelectLevel = () => {
                 ))
             }
         </fieldset>
-
         <Navigation />
-        {/* <button onClick={() => {
-            setSlide(1)}}> Previous </button>
-        <button 
-            disabled={level === undefined}
-            onClick={() => {setSlide(3)}}
-        > Next </button> */}
     </div>)
 }
 

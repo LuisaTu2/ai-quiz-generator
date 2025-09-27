@@ -1,15 +1,13 @@
 .app-container{
-    max-width: 1200px;   /* prevents things from being too wide */
-    margin: 0 auto;      /* centers the container */
-    padding: 1rem;      
-     /* breathing room */
+    width: 100%;
+    margin: 10% 0%;
+    padding: 0%;
     background: var(--color-background);
 }
 
 .app-title{
-    font-size: 24px;
+    font-size: 2em;
     font-weight: 800;
-    /* color: rgb(172, 207, 172);  */
     color: var(--color-primary);
     text-align: center;
 }
@@ -22,9 +20,8 @@
 }
 
 .app-modules-container {
-  /* background-color: #e4f7e4; */
   margin: 5%;
-  max-width: 500px;
+  /* background-color: violet; */
 }
 
 /* Small (phones) */
@@ -32,34 +29,54 @@
 
 /* Medium (tablets) */
 @media (min-width: 641px) and (max-width: 1024px) {
+  .app-container{
+    margin: 7% 0%;
+    /* background-color: #4caf50; */
+  }
   .app-modules-container {
-    margin: 5% 20%;
+    margin: 3% 20%;
+    /* background-color: violet; */
   }
 }
 
 /* Large (desktops) */
 @media (min-width: 1025px) and (max-width: 1440px) {
+  .app-container{
+    margin: 5% 0%;
+    /* background-color: blue; */
+  }
   .app-modules-container {
       margin: 2% 30%; 
+      /* background-color: blue; */
   }
 }
 
 /* XL (very large screens) */
 @media (min-width: 1441px) {
+    .app-container{
+      margin: 5% 0%;      
+      /* background-color: yellow; */
+    }
+
     .app-modules-container {
       margin: 1% 40%; 
-  }
+      /* background-color: yellow; */
+    }
 }
 
 
 /* fonts */
 body {
   font-family: 'Nunito', 'Inter', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
 }
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
 }
-
 
 /* color scheme */
 
@@ -73,16 +90,6 @@ h1, h2, h3 {
   --color-text-muted: #666666;
   --color-success: #4caf50;
 }
-
-body {
-  font-family: 'Nunito', sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  margin: 0;
-  padding: 0;
-  /* font-size: clamp(14px, 2vw, 18px); */
-}
-
 
 
 /* cards / panels */

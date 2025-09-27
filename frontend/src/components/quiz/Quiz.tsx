@@ -10,14 +10,15 @@ const Quiz = () => {
     const questions = quiz["questions"]
     const reset = useReset(0);
     const [correctAnswers, setCorrectAnswers] = useState<string[]>([])
+    const allCorrect = correctAnswers.length === questions.length
 
     useEffect(() => {
-        if (correctAnswers.length === questions.length){
+        if (allCorrect){
             setTimeout(() => {
                 setSlide(5)
             }, 500)
         }
-    }, [correctAnswers])
+    }, [allCorrect])
 
     return (
         <div className="quiz">
@@ -27,7 +28,7 @@ const Quiz = () => {
                 })}
             </ul>
             <div className="quiz-home-btn">
-                <button className="button" onClick={reset} >
+                <button className="button" onClick={reset} disabled={allCorrect} >
                     Home
                 </button>
             </div>

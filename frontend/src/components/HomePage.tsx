@@ -23,8 +23,9 @@ const HomePage = () => {
 
     return (
         <div className="app-container">
+            {/* <div className="app-title">chisme</div> */}
             <div className="app-title">chisme</div>
-            <div className="app-subtitle"> an AI-powered language learning app </div>
+            <div className="app-subtitle"> an AI-powered language quiz generator </div>
             <div className="app-modules-container">
                 { showWelcomePage &&  <Welcome /> }
                 {/* { showLoader && <Loader />} */}

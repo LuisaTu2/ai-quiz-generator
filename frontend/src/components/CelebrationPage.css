@@ -6,8 +6,16 @@
     /* background-color: red; */
 }
 
+.congratulations-with-plants {
+    /* width: 100%; */
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
 .congratulations-text{
-    padding: 10% 0%;
+    padding: 5% 0%;
     text-align: center;
 }
 
@@ -16,35 +24,32 @@
 }
 
 .congratulations-text div i{
-    font-size: 14px;
+    font-size: 1em;
     color: var(--color-text-muted)
 }
 
-.plant-loaders {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+
+.plant-celebrate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  gap: 0.5rem;
 }
 
-
-/* All boxes start invisible */
-.plant-transition {
-  /* width: 100px; */
-  /* height: 100px; */
-  /* opacity: 0; */
-  /* transform: translateY(20px); */
-  /* animation: fadeInUp 1s forwards;  */
-  /* same animation, different delays */
+.plant-celebrate span {
+  display: inline-block;
+  animation: hop-celebrate 1s ease-in-out infinite;
 }
 
-/* Different delays for each box */
-/* .plant-0 { animation-delay: 0ms; }
-.plant-1 { animation-delay: 300ms; }
-.plant-2 { animation-delay: 600ms; }
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@keyframes hop-celebrate {
+  0%, 100% {
+    transform: translateY(0) scale(1);
   }
-} */
+  30% {
+    transform: translateY(-10px) scale(1.1); /* hop up with excitement */
+  }
+  60% {
+    transform: translateY(-10px) scale(0.95); /* little bounce down */
+  }
+}

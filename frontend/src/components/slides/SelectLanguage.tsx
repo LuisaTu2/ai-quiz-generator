@@ -12,9 +12,10 @@ const SelectLanguage = () => {
     }
 
     return (
-    <div>
+    <div className="slide">
         <fieldset>
-            <legend> What language would you like to learn? </legend>
+            {/* <legend> What language would you like to learn? </legend> */}
+            <legend> Pick a language </legend>
             {
                 languages.map((value, ix) => (
                     <label key={ix} htmlFor={value}>

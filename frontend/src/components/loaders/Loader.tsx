@@ -29,9 +29,11 @@ const Loader = () => {
           ))}
       </div>}
       </div>
-    <div className="writing-loader">
-      <span className="hand">✍️</span>
-    </div>
+      <div className="plant-loaders">
+        <span>🪴</span>
+        <span>🪴</span>
+        <span>🪴</span>
+      </div>
     </>
   );
 };

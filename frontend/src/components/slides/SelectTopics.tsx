@@ -60,7 +60,7 @@ const SelectTopics = () => {
 
 
     return (
-    <div>
+    <div className="slide">
         <fieldset>
             <legend> 
                 <div className="app-topics-label">
@@ -87,13 +87,13 @@ const SelectTopics = () => {
         </fieldset>
 
         <div className="nav-buttons">
-            <button className="button nav-button" 
+            <button className="nav-button nav-button-secondary" 
                     onClick={() => {
                     setSlide(slide - 1)}}> 
                         Previous 
                 </button>
             <button
-                className="button nav-button"
+                className="nav-button nav-button-primary"
                 disabled={topics === undefined || !topics.length}
                 onClick={() => handleOnClick()}
             > Next </button>

@@ -8,9 +8,9 @@ const Navigation = () => {
 
     return (
         <div className="nav-buttons">
-            <button className="button nav-button" onClick={() => {
+            <button className="nav-button nav-button-secondary" onClick={() => {
                 setSlide(slide - 1)}}> Previous </button>
-            <button className="button nav-button"
+            <button className="nav-button nav-button-primary"
                 // disabled={option === undefined}
                 onClick={() => {setSlide(slide + 1)}}
             > Next </button>

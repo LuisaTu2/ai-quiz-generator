@@ -1,8 +1,7 @@
-// CuteSpinner.jsx
 import { useEffect, useState } from "react";
-import "./Spinner.css"; 
+import "./PlantLoader.css"; 
 
-const Spinner = () => {
+const PlantLoader = () => {
   const [_, setJumpCount] = useState(0);
   const [isBackflip, setIsBackflip] = useState(false);
 
@@ -27,4 +26,4 @@ const Spinner = () => {
   );
 };
 
-export default Spinner;
+export default PlantLoader;

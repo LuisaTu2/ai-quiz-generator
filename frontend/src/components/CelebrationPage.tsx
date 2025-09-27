@@ -1,27 +1,5 @@
-import PlantLoader from "./loaders/PlantLoader";
 import useReset from "./useReset";
 import "./CelebrationPage.css";
-
-import { useState, useEffect, type ReactNode } from "react";
-
-interface DelayedComponentProps {
-  delay?: number;           // delay in milliseconds
-  children: ReactNode;      // the component(s) to render
-}
-
-// const DelayedComponent: React.FC<DelayedComponentProps> = ({
-//   delay,
-//   children,
-// }) => {
-//   const [show, setShow] = useState(false);
-
-//   useEffect(() => {
-//     const timer = setTimeout(() => setShow(true), delay);
-//     return () => clearTimeout(timer); // cleanup
-//   }, [delay]);
-
-//   return show ? <>{children}</> : null;
-// };
 
 
 const CelebrationPage = () => {

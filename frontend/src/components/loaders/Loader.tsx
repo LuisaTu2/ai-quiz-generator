@@ -2,9 +2,11 @@ import { useContext } from "react";
 import { LearningContext } from "../utils/LearningContext";
 import "./Loader.css";
 import { firstUpperCase } from "../utils/constants";
+// import useReset from "../useReset";
 
 const Loader = () => {
   const { language, level, topics } =  useContext(LearningContext)
+  // const reset = useReset(0);
   const l = topics.length
 
   return (
@@ -34,6 +36,13 @@ const Loader = () => {
         <span>🪴</span>
         <span>🪴</span>
       </div>
+
+      {/* <div className="loader-home-btn-container">
+        <button className="button button-primary" onClick={() => reset()}>
+          home 
+        </button>
+      </div> */}
+
     </>
   );
 };

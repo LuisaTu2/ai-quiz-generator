@@ -5,10 +5,11 @@ interface Props {
     position: number
     data: QuestionType
     correctAnswers: string[]
+    disabled: boolean
     setCorrectAnswers: React.Dispatch<React.SetStateAction<string[]>>
 }
 
-const Question: React.FC<Props>  = ({ data, position, correctAnswers, setCorrectAnswers }) => {
+const Question: React.FC<Props>  = ({ data, position, correctAnswers, disabled, setCorrectAnswers }) => {
     const [selectedOption, setSelectedOption] = useState<string>("");
     const {question, options, answer} = data
     // console.log("selected option:", selectedOption,"answer: ", answer)
@@ -45,6 +46,7 @@ const Question: React.FC<Props>  = ({ data, position, correctAnswers, setCorrect
                                         value={option}
                                         checked={selectedOption === option}
                                         onChange={handleOnChange}
+                                        disabled={ disabled }
                                     />
                                     {option}
                                     {

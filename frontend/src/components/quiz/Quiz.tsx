@@ -24,7 +24,7 @@ const Quiz = () => {
         <div className="quiz">
             <ul>
                 {questions.map((q, ix) => {
-                    return (<Question key={ix} position={ix} data={q} correctAnswers={correctAnswers} setCorrectAnswers={setCorrectAnswers}/>)
+                    return (<Question key={ix} position={ix} data={q} correctAnswers={correctAnswers} setCorrectAnswers={setCorrectAnswers} disabled={allCorrect}/>)
                 })}
             </ul>
             <div className="quiz-home-btn">

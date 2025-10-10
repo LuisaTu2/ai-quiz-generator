@@ -1,0 +1,132 @@
+.congratulations-container{
+    width: 80%;
+  margin: 0% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+      font-size: 0.9rem;
+    /* background-color: red; */
+}
+
+.congratulations-greet {
+  margin: 15px 0 15px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(186, 32, 57);
+}
+
+
+.plant-celebrate {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.plant-celebrate span {
+  display: inline-block;
+  animation: hop-celebrate 1s ease-in-out infinite;
+}
+
+@keyframes hop-celebrate {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  30% {
+    transform: translateY(-10px) scale(1.1); /* hop up with excitement */
+  }
+  60% {
+    transform: translateY(-10px) scale(0.95); /* little bounce down */
+  }
+}
+
+.congratulations-encouragement{
+  /* width: 80%; */
+  text-align: justify;
+  /* background-color:#4caf50; */
+
+}
+
+.congratulations-download{
+  /* width: 80%; */
+   text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .download-btn {
+  width: 150px;
+  height: 50px;
+  margin: 10px 0;
+  padding: 5px 10px;
+  background: linear-gradient(135deg, #4caf50, #b2ea23);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+} */
+
+.download-btn {
+  background-color: #dcf3dd;
+  color: #0b440e;
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #e8f5e9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.congratulations-keep-learning{
+  /* width: 80%; */
+  width: 100%;
+  /* background-color: #b2ea23; */
+  margin-top: 20px;
+  text-align: left;
+}
+
+.congratulations-footer {
+  width: 100%;
+  /* background-color: #4caf50; */
+  margin: 20px 0 40px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  line-height: 1.2rem;
+}
+
+.footer-btn{
+  width: 120px;
+  background: linear-gradient(135deg, #338136, #0b440e);
+
+}
+.footer-btn:hover {
+  /* background-color: #e8f5e9; */
+  /* background: linear-gradient(135deg, #446b45, #1b691f); */
+
+  background: linear-gradient(135deg, #8fb391, #5f9461);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+

@@ -1,17 +1,17 @@
 import { useContext } from "react";
-import { LearningContext } from "../LearningContext";
+import { LearningContext } from "../utils/LearningContext";
 import "./Loader.css";
-import { firstUpperCase } from "../constants";
+import { firstUpperCase } from "../utils/constants";
 
 const Loader = () => {
-  const {language, level, topics } =  useContext(LearningContext)
+  const { language, level, topics } =  useContext(LearningContext)
   const l = topics.length
 
   return (
     <>
     <div className="quiz-loader">
       <div>
-        Great, just a moment while we get your quiz ready! 
+        Just a moment while we get your quiz ready! 
       </div>
       <div> 
         We will be learning <span className="loader-highlight">{firstUpperCase(language)}</span>&nbsp;

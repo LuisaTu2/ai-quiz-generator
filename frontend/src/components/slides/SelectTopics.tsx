@@ -1,43 +1,12 @@
 import { useContext, useState } from "react"
-import  {HTTP_PATH, topicOptions, type Topic } from "../constants"
-import { LearningContext } from "../LearningContext"
+import  { topicOptions, type Topic } from "../utils/constants"
+import { LearningContext } from "../utils/LearningContext"
+import getQuizData from "../utils/getQuizData"
 
 
 const SelectTopics = () => {
     const  {language, level, topics,slide, setSlide, setQuiz, setIsLoading,setTopics, setError} = useContext(LearningContext)
     const [userTopics, setUserTopics] = useState<Topic[]>(topics || [])
-
-    const getQuizData = async () => {
-        setIsLoading(true)
-
-        for (let i = 0; i < 3; i++){
-            try {
-                const response = await fetch(`${HTTP_PATH}?language=${language}&level=${level}&topic=${topics}`);
-                const result = await response.json();
-                
-                if (result){
-                    setQuiz(prev => ({ ...prev, ...result }));
-                    setIsLoading(false);
-                    setSlide(0);
-                    break
-                }
-            } catch (error) {
-                console.error(error);
-                if(i === 2){
-                    setSlide(0)
-                    setError(true)
-                }
-            }
-            //  finally {
-                
-            // }
-            // setTimeout(() => {
-            //     setSlide(0)
-            //     setError(true)
-            // }, 4000)
-        }
-
-    }
 
     const handleChange = (topic: Topic) => {
         let updatedTopics = [...userTopics]
@@ -53,8 +22,7 @@ const SelectTopics = () => {
     }
 
     const handleOnClick = () => {
-        setTopics(topics)
-        getQuizData();
+        getQuizData({language, level, topics, setIsLoading, setQuiz, setSlide, setError})
         setSlide(4)
     }
 
@@ -84,6 +52,7 @@ const SelectTopics = () => {
                     </label>
                 ))
             }
+            <div className="slide-count">{slide} / 3 </div>
         </fieldset>
 
         <div className="nav-buttons">

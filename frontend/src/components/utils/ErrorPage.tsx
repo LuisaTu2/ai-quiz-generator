@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { LearningContext } from "./LearningContext"
 import "./ErrorPage.css"
-import useReset from "./useReset";
+import useReset from "../useReset";
 
 const ErrorPage = () => {
     const {setError} = useContext(LearningContext);
@@ -13,8 +13,12 @@ const ErrorPage = () => {
     }
 
     return (<div className="error-page-container">
-        <div>Oops, something went wrong!</div> 
-        <div><i>We are sorry things didn't go as expected, let's try learning again!</i></div>
+        <div><i>Oops, something went wrong!</i></div> 
+        <div>
+            {/* <i> */}
+                We are sorry things didn't go as expected, let's try learning again!
+            {/* </i> */}
+        </div>
         <button className="button button-secondary" onClick={handleOnClick}>
             I want to keep learning!     
         </button>  

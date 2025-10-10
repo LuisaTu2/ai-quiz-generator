@@ -21,7 +21,10 @@ const PlantLoader = () => {
 
   return (
     <div className="potted-plant-spinner">
-      <span className={`plant ${isBackflip ? "backflip" : ""}`}>🪴</span>
+      <span className={`plant ${isBackflip ? "backflip" : ""}`} 
+      // TODO: explor this option later
+      // onClick={() => setIsBackflip(true)}
+      >🪴</span>
     </div>
   );
 };

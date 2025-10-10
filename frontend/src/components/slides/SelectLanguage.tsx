@@ -1,11 +1,11 @@
 import { useContext } from "react"
-import  { firstUpperCase, languages, type Language } from "../constants"
-import { LearningContext } from "../LearningContext"
-import Navigation from "../Navigation"
+import  { firstUpperCase, languages, type Language } from "../utils/constants"
+import { LearningContext } from "../utils/LearningContext"
+import Navigation from "../utils/Navigation"
 
 
 const SelectLanguage = () => {
-    const {language, setLanguage } = useContext(LearningContext)
+    const {language, slide, setLanguage } = useContext(LearningContext)
 
     const handleChange = (language: Language) => {
         setLanguage(language)
@@ -31,6 +31,7 @@ const SelectLanguage = () => {
                     </label>
                 ))
             }
+            <div className="slide-count">{slide} / 3 </div>
         </fieldset>
         <Navigation />
     </div>)

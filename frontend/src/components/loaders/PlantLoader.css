@@ -27,8 +27,12 @@
 }
 
 /* Backflip animation */
+.plant:hover{
+  cursor: pointer;
+}
+
 .backflip {
-  animation: backflip 2s ease-in-out forwards; /* slower */
+  animation: backflip 2s ease-in-out forwards; 
 }
 
 @keyframes backflip {

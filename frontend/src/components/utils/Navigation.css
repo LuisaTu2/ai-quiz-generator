@@ -17,7 +17,7 @@
   font-size: 0.8em;
   font-weight: 600;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   color: #fff;
   transition: background-color 0.3s ease;
@@ -29,16 +29,17 @@
 }
 
 .nav-button-primary:hover {
-  background-color: #5a52d5; /* slightly darker blue */
+  background-color: (--color-primary-hover); 
+  transform: scale(1.02);
 }
 
 .nav-button-secondary {
-  background-color: #eeecec;
-  /* color:var(--color-primary); */
+  background-color: #ddd8d8;
+  color:#fff;
 }
 
 .nav-button-secondary:hover {
-  background-color: #ddd8d8;
-  color:#fff;
+  background-color: #eeecec;
+
 }
 

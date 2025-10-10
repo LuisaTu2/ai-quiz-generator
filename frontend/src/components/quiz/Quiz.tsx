@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-import { LearningContext } from "../LearningContext";
+import { LearningContext } from "../utils/LearningContext";
 import Question from "./Question";
 import "./Quiz.css";
 import useReset from "../useReset";
@@ -15,8 +15,8 @@ const Quiz = () => {
     useEffect(() => {
         if (allCorrect){
             setTimeout(() => {
-                setSlide(5)
-            }, 500)
+                setSlide(6)
+            }, 2000)
         }
     }, [allCorrect])
 
@@ -28,8 +28,8 @@ const Quiz = () => {
                 })}
             </ul>
             <div className="quiz-home-btn">
-                <button className="button" onClick={reset} disabled={allCorrect} >
-                    Home
+                <button className={`button ${allCorrect ? "disabled-btn" : "" }`} onClick={reset} disabled={allCorrect} >
+                    home
                 </button>
             </div>
         </div>

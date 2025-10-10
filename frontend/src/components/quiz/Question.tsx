@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import type { QuestionType } from "../constants";
+import type { QuestionType } from "../utils/constants";
 
 interface Props {
     position: number
@@ -16,7 +16,6 @@ const Question: React.FC<Props>  = ({ data, position, correctAnswers, setCorrect
     const handleOnChange = (e: React.ChangeEvent<HTMLInputElement> ) => {
         const value = e.target.value
         setSelectedOption(value)
-
     }
 
     useEffect(() => {

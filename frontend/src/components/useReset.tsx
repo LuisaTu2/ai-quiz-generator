@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { LearningContext } from "./LearningContext"
+import { LearningContext } from "./utils/LearningContext"
 
 
 const useReset = (page: number) => {

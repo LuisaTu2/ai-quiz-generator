@@ -1,13 +1,36 @@
 .app-welcome {
     text-align: center;
-    color:var(--color-text);
 }
 
 .app-welcome-description {
-    padding: 0% 10% 0% 10%;
-    text-align: center;
+    padding: 2% 20%;
+    text-align: justify;
 }
 
 .app-welcome button{    
     margin-top: 0%;
+    animation: welcome-button-pulse 2s infinite;
+    transition: transform 0.5s ease-in-out;
 }
+
+
+.app-welcome button:hover {
+    transform: scale(1.03);
+}
+
+@keyframes welcome-button-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(76, 175, 80, 0.4);
+    }
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 15px rgba(189, 191, 189, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(76, 175, 80, 0.4);
+    }
+}
+
+

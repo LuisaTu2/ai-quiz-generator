@@ -30,7 +30,7 @@ export default function CreditBubble() {
       className="credit-bubble"
       style={{
         position: "fixed",
-        right: collapsed ? "10px" : "10px",
+        right: collapsed ? "5px" : "10px",
         bottom: "20px",
         // width: "50px",
         width: collapsed ? "30px" : "50px",
@@ -49,18 +49,10 @@ export default function CreditBubble() {
         overflow: "hidden",
         fontSize: collapsed ? "20px" : "15px",
         padding: collapsed ? "0px" : "10px",
-        opacity: collapsed ? "50%" : "100%",
+        opacity: collapsed ? "80%" : "100%",
       }}
     >
       {collapsed ? "🍁" : `made in 🍁`}
     </div>
   );
 }
-
-
-// right: collapsed ? "0px" : "10px",
-// width: collapsed ? "50px" : "200px",
-// height: collapsed ? "40px" : "200px",
-// borderRadius: "50%",
-// // borderRadius: collapsed ? "50%" : "40px 0 0 40px",
-// fontSize: collapsed ? "16px" : "1rem",

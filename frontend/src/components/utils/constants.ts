@@ -1,8 +1,8 @@
 /* types */
 export type Language = "english" | "french" | "italian" | "spanish" | "serbian"
 export type Level = "beginner" | "intermediate" | "advanced"
-export type Topic = "food" | "books" | "sci-fi" | "psychology"
- | "education" | "sports" | "plants" 
+export type Topic = "food" | "fashion" | "travel" | "space"
+ | "geography" | "sports" | "nature" 
 
 
 export interface LearningOptions {
@@ -26,7 +26,8 @@ export interface Quiz {
 /* constants */
 export const languages: Language[] =  ["english", "french", "italian", "serbian", "spanish"] 
 export const levels: Level[] = ["beginner", "intermediate", "advanced"]
-export const topicOptions: Topic[] = ["food", "books", "sci-fi", "psychology", "education", "sports", "plants"]
+export const topicOptions: Topic[] = ["fashion", "food", "geography", "nature", "space", "sports", "travel"]
+
 export const HTTP_PATH: string = "http://18.216.159.247/learn-api/"
 
 export const firstUpperCase = (s: string) => {

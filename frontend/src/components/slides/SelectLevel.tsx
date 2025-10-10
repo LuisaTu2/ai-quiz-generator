@@ -1,11 +1,11 @@
 import { useContext } from "react"
-import  {firstUpperCase, levels, type Level } from "../constants"
-import { LearningContext } from "../LearningContext"
-import Navigation from "../Navigation"
+import  {firstUpperCase, levels, type Level } from "../utils/constants"
+import { LearningContext } from "../utils/LearningContext"
+import Navigation from "../utils/Navigation"
 
 
 const SelectLevel = () => {
-    const {level, setLevel } = useContext(LearningContext)
+    const {level, slide, setLevel } = useContext(LearningContext)
 
     const handleChange = (level: Level) => {
         setLevel(level)
@@ -30,7 +30,9 @@ const SelectLevel = () => {
                     </label>
                 ))
             }
+            <div className="slide-count">{slide} / 3 </div>
         </fieldset>
+        
         <Navigation />
     </div>)
 }

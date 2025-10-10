@@ -1,27 +1,27 @@
 .app-container{
     width: 100%;
-    margin: 10% 0%;
+    height: 100%;
+    margin: 20px 0%;
     padding: 0%;
-    background: var(--color-background);
+    color: var(--color-text);
 }
 
 .app-title{
-    font-size: 2em;
-    font-weight: 800;
+    font-size: 2.2em;
+    font-weight: 600;
     color: var(--color-primary);
     text-align: center;
 }
 
 .app-subtitle{
   font-size: 14px;
-  color: rgb(191, 194, 198);
+  color: rgb(176, 185, 196);
   font-style: italic;
   text-align: center;
 }
 
 .app-modules-container {
   margin: 5%;
-  /* background-color: violet; */
 }
 
 /* Small (phones) */
@@ -29,10 +29,9 @@
 
 /* Medium (tablets) */
 @media (min-width: 641px) and (max-width: 1024px) {
-  .app-container{
+  /* .app-container{
     margin: 7% 0%;
-    /* background-color: #4caf50; */
-  }
+  } */
   .app-modules-container {
     margin: 3% 20%;
     /* background-color: violet; */
@@ -42,7 +41,7 @@
 /* Large (desktops) */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .app-container{
-    margin: 5% 0%;
+    /* margin: 5% 0%; */
     /* background-color: blue; */
   }
   .app-modules-container {
@@ -54,7 +53,7 @@
 /* XL (very large screens) */
 @media (min-width: 1441px) {
     .app-container{
-      margin: 5% 0%;      
+      /* margin: 5% 0%;       */
       /* background-color: yellow; */
     }
 
@@ -67,29 +66,36 @@
 
 /* fonts */
 body {
-  font-family: 'Nunito', 'Inter', sans-serif;
   font-family: 'Nunito', sans-serif;
-  background-color: var(--color-background);
+  /* background-color: var(--color-background); */
+  /* background: linear-gradient(to bottom, #e9f1e9 50%, #d8f0d9 85%, #c1e3c2 92%, #76a577 99%); */
+  /* background: linear-gradient(to bottom, #f7f4ef, #f1ebe2); */
   color: var(--color-text);
   margin: 0;
   padding: 0;
 }
 h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 /* color scheme */
 
 :root {
-  --color-primary: #6c63ff;  
-  --color-primary-slides-title: #9a94e6;
-  --color-secondary: #ff6584;
-  --color-background: #f9fafb;
+  --color-primary: #1b691f;  
+  --color-primary-hover: #2f5c32;  
+  /* --color-primary-slides-title: #9a94e6; */
+  --color-primary-slides-title: #2e5d31;
+  --color-secondary: #d43a59;
+  --color-background: #f9e0a1;
   --color-surface: #ffffff;
-  --color-text: #333333;
+  --color-text: #646060;
   --color-text-muted: #666666;
   --color-success: #4caf50;
 }
+
+/* #f5d88b – muted warm yellow, can pair nicely as a secondary accent */
+
+/* #f9e0a1 – soft golden-beige, warm and clean */
 
 
 /* cards / panels */
@@ -106,7 +112,7 @@ h1, h2, h3 {
   background-color: var(--color-primary);
   color: #fff;
   padding: 0.75rem 1.25rem;
-  border-radius: 8px;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
   font-weight: 600;
@@ -114,11 +120,12 @@ h1, h2, h3 {
 }
 
 .button:hover {
-  background-color: #5a52d5;
+  background-color: var(--color-primary-hover);
 }
 
 /* secondary button */
 .button-secondary {
+  width: 200px;
   background-color: var(--color-secondary);
 }
 
@@ -130,5 +137,31 @@ h1, h2, h3 {
 .text-muted {
   color: var(--color-text-muted);
 }
+
+#root {
+  min-width: 300px;
+  margin: 0px;
+  padding:0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  line-height: 1.5;
+  /* font-synthesis: none; */
+  /* text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
 
 

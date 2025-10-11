@@ -23,7 +23,7 @@ const CelebrationPage = () => {
 
             <div className="congratulations-encouragement">
                 Great work on completing the quiz! You are now one step closer to mastering a new language.
-                Make sure to save your progress so you can review it at a later time. 
+                Don't forget to save your progress so you can review it anytime! 
             </div>
             <div className="congratulations-download">
                 <div className="congratulations-download-text">
@@ -38,13 +38,17 @@ const CelebrationPage = () => {
             </div>
 
             <div className="congratulations-footer"> 
-                <button className="button footer-btn" onClick={() => {
+                <button className="footer-btn footer-btn-primary" onClick={() => {
                     setQuiz({"questions": []})
                     // trigger again
                     setSlide(4)
                     getQuizData({language, level, topics, setIsLoading, setQuiz, setSlide, setError})
-                }} > take another quiz </button> 
-                <button className="button footer-btn" onClick={reset} > learn a new language </button> 
+                }} > 
+                    take another quiz 
+                </button> 
+                <button className="footer-btn footer-btn-secondary" onClick={reset} > 
+                    learn a new language 
+                </button> 
             </div> 
         </div>
 }

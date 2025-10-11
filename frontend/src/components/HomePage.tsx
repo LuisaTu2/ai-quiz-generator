@@ -13,6 +13,7 @@ import ErrorPage from "./utils/ErrorPage"
 import CreditBubble from "./utils/CreditBubble"
 import { AnimatePresence } from "framer-motion"
 import MotionDiv from "./utils/MotionDiv"
+import FeedbackBubble from "./utils/FeedbackBubble"
 
 
 const HomePage = () => {
@@ -20,8 +21,7 @@ const HomePage = () => {
     const showWelcomePage = slide === 0 && !isLoading && Object.keys(quiz["questions"]).length === 0;
     // const showLoader = slide == 0 && isLoading;
     const showQuiz = !isLoading && Object.keys(quiz["questions"]).length !== 0;
-    // implement a reset if navigating back to home page
-
+    const showBubbles = slide === 0 || slide === 6 || error;
 
     return (
          <AnimatePresence mode="wait">
@@ -42,7 +42,9 @@ const HomePage = () => {
                     { slide === 5 && showQuiz && <MotionDiv content={<Quiz />} duration={0.8}/>  }
                     { slide === 6 && <MotionDiv content={<CelebrationPage />} duration={3}/>  }
 
-                    { !showQuiz && <CreditBubble />}
+                    { showBubbles&& <MotionDiv content={<CreditBubble />} duration={2}/> }
+                    { showBubbles &&<MotionDiv content={<FeedbackBubble />} duration={2}/>}
+                    
                     { error && <ErrorPage />}
                 </div>
             
@@ -51,7 +53,6 @@ const HomePage = () => {
                 To learn a language is to have one more window from which to look at the world
             </div> */}
             {/* <div><i> Chinese Proverb</i></div> */}
-
 
             </div>
         </AnimatePresence>

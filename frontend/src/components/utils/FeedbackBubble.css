@@ -1,0 +1,124 @@
+.credit-bubble{
+    /* z-index: -10 */
+
+}
+.feedback-container {
+    width: 100%;
+}
+
+.feedback-bubble {
+    position: fixed;
+    right: 85px;
+    bottom: 20px;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bubble{
+    height: 30px;
+    width: 30px;
+    padding-left: 4px;
+    border-radius: 50%;
+    background-color: rgba(63, 178, 124, 0.75);
+    font-size: 1.2rem;
+    transition: all 1s ease;
+}
+
+.bubble-contact-text{
+    background-color: rgba(131, 197, 165, 0.85);
+    border-radius: 50%;
+    font-size: 12px;
+    height: 50px;
+    width: 50px;
+    transition: all 1s ease;
+    padding: 8px;
+    text-align: center;
+}
+
+
+
+
+/* FORM */
+
+.feedback-form-text {
+    font-size: 0.9rem;
+    padding: 5%;
+}
+
+.feedback-form {
+  position: fixed;
+  bottom: 100px;
+  right: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 250px;
+  animation: floatUp 1s ease forwards; /* changed from popIn */
+  z-index: 1000;
+}
+@keyframes floatUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.feedback-form h4 {
+  margin-top: 0;
+  color: #0b440e;
+  text-align: center;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 90%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.feedback-form button {
+  background-color: rgba(63, 178, 124, 0.75);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem;
+  margin-top: 0.8rem;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.feedback-form button:hover {
+  transform: scale(1.02);
+  background-color: rgba(63, 178, 124, 0.95);
+}
+
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(63, 178, 124, 0.75); 
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+  color: rgba(63, 178, 124, 0.95); /* darker hover green */
+}

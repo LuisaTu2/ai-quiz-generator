@@ -38,5 +38,9 @@ export const firstUpperCase = (s: string) => {
     return firstLetter.toUpperCase() + s.slice(1) 
 }
 
+export const EMAILJS_SERVICE_ID = "service_strapazza_palle"
+export const EMAILJS_TEMPLATE_ID = "template_r9luivw"
+export const EMAILJS_PUBLIC_KEY = "5X2vLQdXV_I2c1gXZ"
+
 
 

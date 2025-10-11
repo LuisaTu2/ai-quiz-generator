@@ -1,0 +1,252 @@
+:root {
+  /* ===== Base Colors ===== */
+  --color-primary: #63a166;  
+  --color-primary-hover: #2f5c32;  
+
+  --color-bg: #FAFAFA;              /* background (off-white) */
+  --color-text: #4c4f56;            /* main text */
+  --color-text-muted: #666666;      /* secondary text */
+  --color-heading: #0F172A;         /* dark slate for headings */
+  --color-border: #E5E5E5;          /* subtle dividers */
+
+  /* ===== Accents ===== */
+  --color-accent: #0070F3;          /* blue accent for links, highlights */
+  --color-accent-hover: #0059C9;    /* hover blue */
+  --color-highlight-bg: #FFF9E6;    /* pale warm yellow for emphasis */
+
+  /* ===== Code / Quote Blocks ===== */
+  --color-code-bg: #F4F4F5;         /* light neutral gray background */
+  --color-code-text: #1A1A1A;       /* readable code color */
+
+  /* ===== Font Families ===== */
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-code: 'Source Code Pro', monospace;
+
+  /* ===== Sizing ===== */
+  --max-content-width: 720px;
+  --line-height: 1.75;
+  --radius: 6px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  max-width: 1280px;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family: var(--font-body);
+  font-size: 0.9rem;;
+  line-height: var(--line-height);
+  text-align: justify;
+}
+
+/* Device Type	Common Width	Recommended Min Width for Layout
+Small phones	320px (e.g. older iPhones SE)	320px (absolute minimum)
+Regular phones	360–430px (modern iPhones, Androids)	375–400px (sweet spot)
+Tablets	768–1024px	768px
+Desktops	≥1280px	1280px or responsive */
+
+
+.root{
+  width: 80%;
+  margin-left: 10%;
+}
+@media (min-width: 640px) {
+  .root{
+    width: 60%;
+    margin-left: 20%;
+  }
+}
+@media (min-width: 1000px) {
+  .root{
+    width: 40%;
+    margin-left: 30%;
+  }
+}
+
+
+.header {
+  width: 100%;
+  /* background-color: rgb(128, 113, 143); */
+}
+
+.header-title{
+  font-size: 2rem;
+  padding: 20px 0 0px 0;
+  text-align: center;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+@media (max-width: 400px) {
+  .header-title{
+    font-size: 1.6rem;
+  }
+}
+
+.header-sub-title{
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 0 0 20px 0;
+  text-align: center;
+  color: #8f939a;
+}
+
+.section-title{
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 10px 0;
+  color: #6395ce;
+}
+
+a {
+  text-decoration: none;
+  color: #4c4f56;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+/* ===== code snippet ===== */
+.code-container {
+  position: relative;
+  background: #F4F5F6; /* light neutral background */
+  color: #1E293B;
+  border: 1px solid #E5E5E5; /* subtle border */
+  border-radius: 8px;
+  padding: 0px 0 0 10px;
+  margin: 20px 0;
+  overflow-x: auto;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.65rem;
+}
+
+pre {
+  margin: 0;
+}
+
+code {
+  display: block;
+  white-space: pre;
+  line-height: 1.5;
+  color: #1E293B;
+}
+
+.code-snippet-nginx, .code-snippet-vite {
+  margin: 0;
+  padding: 0;
+}
+
+/* COPY BUTTON */
+
+
+/* Syntax Highlighting */
+.keyword { color: #D73A49; font-weight: 600; }       /* e.g., def, return */
+.function { color: #6F42C1; }                        /* function names */
+.builtin { color: #005CC5; }                          /* print, len, etc. */
+.string { color: #032F62; }                           /* string literals */
+.comment { color: #6A737D; font-style: italic; }     /* comments */
+.number { color: #005CC5; }                           /* numbers */
+
+.json-key { color: #D73A49; }       /* red keys */
+.json-string { color: #032F62; }    /* dark blue strings */
+.json-number { color: #005CC5; }    /* blue numbers */
+.json-boolean { color: #6F42C1; }   /* purple booleans */
+.json-null { color: #6A737D; font-style: italic; } /* gray nulls */
+
+
+
+/* Container for code snippet */
+
+
+/* Copy Button */
+button.copy-btn-nginx, button.copy-btn-vite {
+  position: absolute;
+  width: 70px;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: #7DAE89; /* sage green */
+  color: #FAFAFA;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.25rem 0.6rem;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+button.copy-btn-nginx:hover, button.copy-btn-vite:hover {
+  background: #5C8A6A;
+  transform: translateY(-1px);
+}
+button.copied {
+  background: #3bba7f !important;
+  color: #FAFAFA !important;
+}
+
+/* Syntax highlighting for Nginx config */
+.keyword { color: #22863A; font-weight: 600; }   /* http, server, location */
+.directive { color: #2C7A7B; }                    /* listen, root, index, proxy_* */
+.string { color: #0B7285; }                       /* paths and endpoints */
+.variable { color: #3B82F6; }                     /* $host, $remote_addr */
+.comment { color: #6B7280; font-style: italic; }  /* comments */
+.highlight {color: rgb(31, 85, 213,0.8); font-weight: 600;}
+
+
+.prompt-container {
+  background: #EAF4EA;      /* light sage-green for a gentle highlight */
+  border-left: 4px solid #7DAE89; /* accent color */
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.65rem;
+  line-height: 1.5;
+  color: #1F2937;           /* dark text for readability */
+  overflow-x: auto;         /* allow horizontal scroll if needed */
+  white-space: pre-wrap;    /* preserve line breaks */
+}
+
+/* Optional: highlight variables inside the prompt */
+.prompt-container .variable {
+  color: #3B82F6;           /* blue for variables like {self.language} */
+  font-weight: 600;
+}
+
+
+.chisme-img {
+  width: 80%;
+  margin: 0px 0 20px 0 ;
+  padding: 0;
+}
+
+.list-title {
+  color: #1b416d;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.list-text {
+  color: #8799ae;
+  font-size: 0.85rem;
+  margin: 0 0px 15px 0;
+  width: 80%;
+}
+
+.list-images {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.img-incorrect {
+  width: 50%;
+  margin-left: 10%;
+  /* width: 250px; */
+  /* height: 300px; */
+}

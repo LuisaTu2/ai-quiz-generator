@@ -250,3 +250,9 @@ button.copied {
   /* width: 250px; */
   /* height: 300px; */
 }
+
+.chisme {
+    text-decoration: none; 
+    font-weight:600;
+    color: #69bf97;
+}

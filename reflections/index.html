@@ -1,93 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>chisme · reflections</title>
   </head>
   <body>
     <div class="root">
-      
       <div class="header">
         <div class="header-title">chisme · reflections</div>
-        <div class="header-sub-title"> behind the scenes of building an AI-powered language quiz generator </div>
+        <div class="header-sub-title">
+          behind the scenes of building an AI-powered language quiz generator
+        </div>
       </div>
 
-      <div class="section-title">
-        overview
-      </div>
+      <div class="section-title">overview</div>
 
-          <!-- The goal of this project is to leverage a Large Language Model (LLM) to generate dynamic quizzes. -->
+      <!-- The goal of this project is to leverage a Large Language Model (LLM) to generate dynamic quizzes. -->
 
- Learning a new language has never been easier with the 
-        recent explosion in AI tools. Grammar rules that make no sense? Unsure whether
-        it is a <i>buongiorno</i> or a <i>bonjour</i> or which countries you offend when you put 
-        croissants on a pizza? Not to worry, your favourite LLM tool can now be your personal tutor, ready 
-        to answer the questions you'd never dare ask in a classroom full of students. 
-        
-        <br />
-        <br />
+      Learning a new language has never been easier with the recent explosion in
+      AI tools. Grammar rules that make no sense? Unsure whether it is a
+      <i>buongiorno</i> or a <i>bonjour</i> or which countries you offend when
+      you put croissants on a pizza? Not to worry, your favourite LLM tool can
+      now be your personal tutor, ready to answer the questions you'd never dare
+      ask in a classroom full of students.
 
-        But what about testing what you've learned? 
-        Despite LLMs' ability to generate questions, 
-        I find it difficult to hide the answers or get the same level of interactive 
-        feedback that traditional quizzes provide.
-        Plain text quizzes just don't deliver the same learning experience.
-        <br />
-        <br />
-        
-        That’s where <a href="http://18.216.159.247/learn/" class="chisme"> chisme</a> comes in.
-        <br />
-        <br />
+      <br />
+      <br />
 
-        <div class="section-title">
-          project goals
-         </div>
+      But what about testing what you've learned? Despite LLMs' ability to
+      generate questions, I find it difficult to hide the answers or get the
+      same level of interactive feedback that traditional quizzes provide. Plain
+      text quizzes just don't deliver the same learning experience.
+      <br />
+      <br />
 
-        With <a href="http://18.216.159.247/learn/" class="chisme"> chisme</a>, I set out to:
-        <br />
-        <!-- <li>   -->
-          • design a modern and engaging interface 
-          that uses an LLM behind the scenes to generate quizzes based on the user's 
-          language level and interests.
-        <!-- </li> -->
-        <br />
-        • evaluate how well the LLM's responses align with the given prompts.
-        
-        <br />
-        <br />
+      That’s where
+      <a href="https://learn.findingluisa.com/learn/" class="chisme"> chisme</a>
+      comes in.
+      <br />
+      <br />
 
-        <div class="section-title">
-          technical design
-        </div>
-        
-        <a href="http://18.216.159.247/learn/" class="chisme"> Chisme</a> is a full-stack project powered by OpenAI's GPT-4o model. 
-        The app is fully hosted on AWS and uses the following architecture:
-        <br />
-         • <strong>backend</strong>: flask + gunicorn running on an AWS EC2 instance
-        <br />
-         • <strong>frontend</strong>: react + typescript, built with vite for fast iteration
-        <br />
-        • <strong>proxy & routing</strong>: nginx handles both static file serving and API proxying.
-        <br />
-        I used a similar deployment setup in my previous projects 
-        — a more detailed overview is available <a href="http://18.216.159.247/architecture/">here</a>.
+      <div class="section-title">project goals</div>
 
-        <br />
-        <br />
-        <div class="section-title">
-          technical notes
-        </div>
-        • Nginx supports multiple server redirection. Here is a snippet of how I 
-        configured my Nginx.config file:
+      With
+      <a href="https://learn.findingluisa.com/learn/" class="chisme"> chisme</a
+      >, I set out to:
+      <br />
+      <!-- <li>   -->
+      • design a modern and engaging interface that uses an LLM behind the
+      scenes to generate quizzes based on the user's language level and
+      interests.
+      <!-- </li> -->
+      <br />
+      • evaluate how well the LLM's responses align with the given prompts.
 
-        <br />
+      <br />
+      <br />
+
+      <div class="section-title">technical design</div>
+
+      <a href="https://learn.findingluisa.com/learn/" class="chisme"> Chisme</a>
+      is a full-stack project powered by OpenAI's GPT-4o model. The app is fully
+      hosted on AWS and uses the following architecture:
+      <br />
+      • <strong>backend</strong>: flask + gunicorn running on an AWS EC2
+      instance
+      <br />
+      • <strong>frontend</strong>: react + typescript, built with vite for fast
+      iteration
+      <br />
+      • <strong>proxy & routing</strong>: nginx handles both static file serving
+      and API proxying.
+      <br />
+      I used a similar deployment setup in my previous projects — a more
+      detailed overview is available
+      <a href="http://18.216.159.247/architecture/">here</a>.
+
+      <br />
+      <br />
+      <div class="section-title">technical notes</div>
+      • Nginx supports multiple server redirection. Here is a snippet of how I
+      configured my Nginx.config file:
+
+      <br />
 
       <div class="code-container">
         <!-- <button class="copy-btn-nginx">Copy</button> -->
         <!-- super important that the following are on same line! -->
-        <pre><code> 
+        <pre><code>
   <span class="code-snippet-nginx">
   <span class="keyword">http</span> {
 
@@ -127,17 +129,16 @@
 }
   </span>
 </code></pre>
-        </div>
+      </div>
 
-        <br />
-        • I used vite for quick and easy setup. The only <i>gotcha</i> when using vite with nginx, is that
-        you need to set the correct base path in 
-        vite.config.ts to match your nginx route:
+      <br />
+      • I used vite for quick and easy setup. The only <i>gotcha</i> when using
+      vite with nginx, is that you need to set the correct base path in
+      vite.config.ts to match your nginx route:
 
-
-<div class="code-container">
-  <!-- <button class="copy-btn-vite">Copy</button> -->
-  <pre><code>
+      <div class="code-container">
+        <!-- <button class="copy-btn-vite">Copy</button> -->
+        <pre><code>
   <span class="code-snippet-vite">
   <span class="keyword">export default</span> <span class="variable">defineConfig</span>({
       <span class="directive">plugins</span>: [<span class="variable">react</span>({
@@ -150,45 +151,47 @@
   })
   </span>
   </code></pre>
-</div>
-This ensures that built files point to the correct path during deployment.    
-        <br />
-        <br />
+      </div>
+      This ensures that built files point to the correct path during deployment.
+      <br />
+      <br />
 
-        • I opted for a single-page dynamic rendering and used the <i>useContext</i> hook 
-        for shared state management.
-        By the end of the project, the context grew quite large — in the next version, 
-        I'd like to explore using a reducer or state management library for better scalability.
+      • I opted for a single-page dynamic rendering and used the
+      <i>useContext</i> hook for shared state management. By the end of the
+      project, the context grew quite large — in the next version, I'd like to
+      explore using a reducer or state management library for better
+      scalability.
 
-        <br />
-        <br />
+      <br />
+      <br />
 
-            <div class="section-title">
-          the art of prompt engineering
-        </div>
+      <div class="section-title">the art of prompt engineering</div>
 
-        This project gave me a real taste of the challenges of prompt engineering:
+      This project gave me a real taste of the challenges of prompt engineering:
 
-        <br />
-        • hallucinations (where the LLM returns incorrect or totally out of context answers) <i>do</i>
-         happen. Handling them consistently is key if you want your app to be production-ready.
+      <br />
+      • hallucinations (where the LLM returns incorrect or totally out of
+      context answers) <i>do</i>
+      happen. Handling them consistently is key if you want your app to be
+      production-ready.
 
-        <br />
-        • due to these inconsistencies it's very difficult to test an AI-powered endpoint — small wording changes
-         can produce wildly different results. 
+      <br />
+      • due to these inconsistencies it's very difficult to test an AI-powered
+      endpoint — small wording changes can produce wildly different results.
 
-        <br />
-        Let's take a look at some examples where the LLM did not perform despite providing detailed and clear instructions.
+      <br />
+      Let's take a look at some examples where the LLM did not perform despite
+      providing detailed and clear instructions. Here is the prompt that I fed
+      the LLM.
 
-        Here is the prompt that I fed the LLM.
-        
-        <br />
-<div class="prompt-container"><pre>
+      <br />
+      <div class="prompt-container">
+        <pre>
 You are a quiz generator for a language learning app.
 
 The user is learning <span class="variable">{language}</span> at a <span class="variable">{level}</span> level.
 Quiz topics should cover grammar and <span class="variable">{", ".join(topic)}</span>
-Generate a quiz in JSON format only. 
+Generate a quiz in JSON format only.
 Do not include explanations or extra text.
 
 Do not wrap the JSON in triple backticks or any other formatting.
@@ -206,94 +209,134 @@ Return EXACTLY in this JSON format:
   ]
 }
 </pre>
-</div>
-        I tried to be as precise and concise as possible. Despite my attempt at being
-        clear and direct, here are some examples where the LLM did not follow the instructions:
-        <br />
-        <br />
-        <div class="list-title"> • prompt: the answer must match exactly one of the options</div>
-        <div class="list-text">Unfortunately the LLM did not get the memo in this instance and returned two valid answers. </div>
-        <img src="./utils/chisme_double_answer.png" class="chisme-img" alt="screenshot showing two correct answers"/>
+      </div>
+      I tried to be as precise and concise as possible. Despite my attempt at
+      being clear and direct, here are some examples where the LLM did not
+      follow the instructions:
+      <br />
+      <br />
+      <div class="list-title">
+        • prompt: the answer must match exactly one of the options
+      </div>
+      <div class="list-text">
+        Unfortunately the LLM did not get the memo in this instance and returned
+        two valid answers.
+      </div>
+      <img
+        src="./utils/chisme_double_answer.png"
+        class="chisme-img"
+        alt="screenshot showing two correct answers"
+      />
 
-        <div class="list-title"> • prompt: the answer must match exactly one of the options</div>
-        <div class="list-text">Here the options provided did not include the correct answer. </div>
-        <div class="list-images">
-          <img src="./utils/chisme_incorrect_1.png" class="img-incorrect" alt="screenshot showing incorrect LLM answer" />
-          <img src="./utils/chisme_incorrect_2.png" class="img-incorrect" alt="screenshot showing incorrect LLM answer"/>
-          <img src="./utils/chisme_incorrect_3.png" class="img-incorrect" alt="screenshot showing incorrect LLM answer"/>
-        </div>
+      <div class="list-title">
+        • prompt: the answer must match exactly one of the options
+      </div>
+      <div class="list-text">
+        Here the options provided did not include the correct answer.
+      </div>
+      <div class="list-images">
+        <img
+          src="./utils/chisme_incorrect_1.png"
+          class="img-incorrect"
+          alt="screenshot showing incorrect LLM answer"
+        />
+        <img
+          src="./utils/chisme_incorrect_2.png"
+          class="img-incorrect"
+          alt="screenshot showing incorrect LLM answer"
+        />
+        <img
+          src="./utils/chisme_incorrect_3.png"
+          class="img-incorrect"
+          alt="screenshot showing incorrect LLM answer"
+        />
+      </div>
 
+      <div class="list-title">
+        • sometimes the questions don't make a ton of sense
+      </div>
+      <div class="list-text">
+        In this instance it's asking for the meaning of leaf and the answer
+        is...well, leaf.
+      </div>
+      <img
+        src="./utils/chisme_redundant.png"
+        class="chisme-img"
+        alt="screenshot showing redundant LLM answer"
+      />
 
-        <div class="list-title"> • sometimes the questions don't make a ton of sense</div>
-        <div class="list-text">In this instance it's asking for the meaning of leaf and the answer is...well, leaf.</div>
-        <img src="./utils/chisme_redundant.png" class="chisme-img" alt="screenshot showing redundant LLM answer"/>
+      <br />
+      It is definitely possible to build workarounds to handle these mishaps,
+      however even a slight change in the prompt wording might immediately
+      introduce new errors and instability, possibly requiring a new testing
+      strategy.
+      <br />
+      <br />
+      These examples highlight the importance of prompt engineering and building
+      systems that are robust enough to handle the uncertainty that inevitably
+      arises when interacting with an LLM.
 
-        <br />
-        It is definitely possible to build workarounds to handle these mishaps, 
-        however even a slight change in the prompt wording might immediately 
-        introduce new errors and instability, possibly requiring a new testing strategy.
-        <br />
-        <br /> 
-        These examples highlight the importance of prompt engineering 
-        and building systems that are robust enough to handle the uncertainty that 
-        inevitably arises when interacting with an LLM.
+      <br />
+      <br />
 
-        <br />
-        <br />
+      <div class="section-title">final thoughts</div>
+      Building
+      <a href="https://learn.findingluisa.com/learn/" class="chisme"> chisme</a>
+      was a lot of fun, but the LLM's inability to exactly follow the prompt
+      100% of the time made it difficult to test. Definitely a great reminder to
+      always take LLM answers with a grain of salt.
+      <br />
+      <br />
+      In the next iteration, I would love to explore:
 
-        <div class="section-title">
-          final thoughts
-        </div>
-         Building <a href="http://18.216.159.247/learn/" class="chisme"> chisme</a> was a lot of fun, but the LLM's inability to 
-         exactly follow the prompt 100% of the time made it difficult to test. Definitely a great reminder to always take LLM answers 
-         with a grain of salt.
-         <br />
-<br />
-        In the next iteration, I would love to explore:
+      <br />
+      • adding multiple quiz formats (e.g., flashcards or timed challenges)
 
-        <br />
-        • adding multiple quiz formats (e.g., flashcards or timed challenges)
+      <br />
+      • introducing user-based personalization or progress tracking
 
-        <br />
-        • introducing user-based personalization or progress tracking
+      <br />
+      • experimenting with fine-tuned models for more consistent quiz quality.
 
-        <br />
-        • experimenting with fine-tuned models for more consistent quiz quality.
-
-        <br />
-         <br />
-        Overall, building <a href="http://18.216.159.247/learn/" class="chisme"> chisme</a> was a great playground for blending AI,
-         frontend interactivity, and backend architecture — and a gentle
-         reminder that curiosity, a dash of skepticism, and a handful of humility 
-         will always be key ingredients to keep handy on your learning journey.  
-            <br />
-           <br />
-           <br />
+      <br />
+      <br />
+      Overall, building
+      <a href="https://learn.findingluisa.com/learn/" class="chisme"> chisme</a>
+      was a great playground for blending AI, frontend interactivity, and
+      backend architecture — and a gentle reminder that curiosity, a dash of
+      skepticism, and a handful of humility will always be key ingredients to
+      keep handy on your learning journey.
+      <br />
+      <br />
+      <br />
     </div>
 
-  <script>
+    <script>
+      const copyCode = async (codeBlock, btn) => {
+        try {
+          await navigator.clipboard.writeText(codeBlock.innerText.trim());
+          btn.textContent = "Copied!";
+          btn.classList.add("copied");
+          setTimeout(() => {
+            btn.textContent = "Copy";
+            btn.classList.remove("copied");
+          }, 1500);
+        } catch (err) {
+          console.error("Failed to copy:", err);
+        }
+      };
 
-    const copyCode = async (codeBlock, btn) => {
-      try {
-            await navigator.clipboard.writeText(codeBlock.innerText.trim());
-            btn.textContent = 'Copied!';
-            btn.classList.add('copied');
-            setTimeout(() => {
-              btn.textContent = 'Copy';
-              btn.classList.remove('copied');
-            }, 1500);
-          } catch (err) {
-            console.error('Failed to copy:', err);
-          }
-    }
+      const copyBtnNginx = document.querySelector(".copy-btn-nginx");
+      const codeBlockNginx = document.querySelector(".code-snippet-nginx");
+      const copyBtnVite = document.querySelector(".copy-btn-vite");
+      const codeBlockVite = document.querySelector(".code-snippet-vite");
 
-    const copyBtnNginx = document.querySelector('.copy-btn-nginx');
-    const codeBlockNginx = document.querySelector('.code-snippet-nginx');
-    const copyBtnVite = document.querySelector('.copy-btn-vite');
-    const codeBlockVite = document.querySelector('.code-snippet-vite');
-
-    copyBtnNginx.addEventListener('click', () => copyCode(codeBlockNginx, copyBtnNginx));
-    copyBtnVite.addEventListener('click', () => copyCode(codeBlockVite, copyBtnVite));
+      copyBtnNginx.addEventListener("click", () =>
+        copyCode(codeBlockNginx, copyBtnNginx)
+      );
+      copyBtnVite.addEventListener("click", () =>
+        copyCode(codeBlockVite, copyBtnVite)
+      );
     </script>
 
     <script type="module" src="/src/main.tsx"></script>
